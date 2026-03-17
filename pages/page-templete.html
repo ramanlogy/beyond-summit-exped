@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ══ FAVICONS ══ -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+
+  <!-- ══ SEO — edit per page ══ -->
+  <title>Page Title | Beyond Summit Expeditions</title>
+  <meta name="description" content="Page-specific description goes here. Keep under 160 chars.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.beyondsummitexped.com/THIS-PAGE-URL">
+
+  <!-- ══ OG — edit per page ══ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Page Title | Beyond Summit Expeditions">
+  <meta property="og:description" content="Page description here.">
+  <meta property="og:image"       content="https://www.beyondsummitexped.com/assets/og-image.jpg">
+  <meta property="og:url"         content="https://www.beyondsummitexped.com/THIS-PAGE-URL">
+  <meta property="og:locale"      content="en_US">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- ══ SHARED SCHEMA (sitelinks) ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Beyond Summit Expeditions",
+    "url": "https://www.beyondsummitexped.com",
+    "telephone": "+9779811157421",
+    "email": "info@beyondsummitexped.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "Thamel", "addressLocality": "Kathmandu", "addressCountry": "NP" }
+  }
+  </script>
+
+  <!-- ══ FONTS (shared) ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&family=Courier+Prime:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <!-- ══ SHARED STYLESHEETS ══ -->
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/nav.css">
+
+  <!-- ══ PAGE-SPECIFIC CSS (optional) ══ -->
+  <style>
+    /*
+      Only write styles here that are UNIQUE to this page.
+      Everything reusable belongs in design-system.css.
+    */
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAV PLACEHOLDER — loader replaces this ══ -->
+  <div id="nav-placeholder"></div>
+
+  <!-- ══════════════════════════════
+       PAGE CONTENT STARTS HERE
+       Remove page-hero if not needed.
+  ══════════════════════════════ -->
+  <main>
+
+    <!-- ── Inner Page Hero ── -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow page-hero-kicker">Section · Subtitle</span>
+        <h1 class="section-title reveal">Page <em>Title Here</em></h1>
+        <p class="section-lead reveal reveal-delay-1">
+          One or two sentences describing this page. Keep it evocative and brief.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Main Content Section ── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="eyebrow">Section Label</span>
+            <h2 class="section-title">Content <em>Goes Here</em></h2>
+            <p class="section-lead">Supporting description text.</p>
+          </div>
+          <a href="#" class="view-all-link">
+            View All
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Drop cards, grids, forms etc. below -->
+
+      </div>
+    </section>
+
+    <!-- ── Alt background section example ── -->
+    <section class="section alt-bg">
+      <div class="container">
+        <!-- alt-bg content -->
+      </div>
+    </section>
+
+    <!-- ── Dark section example ── -->
+    <section class="section dark-bg">
+      <div class="container">
+        <!-- dark-bg content -->
+      </div>
+    </section>
+
+  </main>
+  <!-- ══ END PAGE CONTENT ══ -->
+
+  <!-- ══ CONTACT STRIP PLACEHOLDER ══ -->
+  <div id="contact-strip-placeholder"></div>
+
+  <!-- ══ FOOTER PLACEHOLDER ══ -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ══ ANALYTICS (keep at bottom) ══ -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+
+  <!-- ══ SHARED JS ══ -->
+  <script src="/js/main.js"></script>
+
+  <!-- ══ COMPONENT LOADING ══
+       Adjust paths if this page is in /pages/ or /treks/ etc.
+  ══ -->
+  <script>
+    BSE.loadAll([
+      { selector: '#nav-placeholder',           url: '/components/nav.html' },
+      { selector: '#contact-strip-placeholder', url: '/components/contact-strip.html' },
+      { selector: '#footer-placeholder',        url: '/components/footer.html' },
+    ]);
+  </script>
+
+  <!-- ══ PAGE-SPECIFIC JS (optional) ══ -->
+  <script>
+    // Any JS unique to this page goes here.
+    // BSE.init() is already called after components load.
+  </script>
+
+</body>
+</html>

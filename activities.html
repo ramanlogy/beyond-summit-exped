@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+
+  <title>Activities & Adventures | Beyond Summit Expeditions</title>
+  <meta name="description" content="Paragliding over Pokhara, helicopter tours to Everest, white water rafting and Chitwan jungle safari — curated adventures by Beyond Summit Expeditions.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.beyondsummitexped.com/activities">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Activities & Adventures | Beyond Summit Expeditions">
+  <meta property="og:description" content="Paragliding, helicopter tours, white water rafting and Chitwan jungle safari in Nepal.">
+  <meta property="og:image"       content="https://www.beyondsummitexped.com/assets/og-activities.jpg">
+  <meta property="og:url"         content="https://www.beyondsummitexped.com/activities">
+  <meta property="og:locale"      content="en_US">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Beyond Summit Expeditions",
+    "url": "https://www.beyondsummitexped.com",
+    "telephone": "+9779811157421",
+    "email": "info@beyondsummitexped.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "Thamel", "addressLocality": "Kathmandu", "addressCountry": "NP" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&family=Courier+Prime:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/nav.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #1a1612;
+      --ink-mid:     #3a3330;
+      --ink-light:   #6b5f58;
+      --parchment:   #f4efe8;
+      --cream:       #faf7f2;
+      --gold:        #b8932a;
+      --gold-light:  #d4a843;
+      --forest:      #2d4a35;
+      --section-gap: clamp(4.5rem, 9vw, 8rem);
+      --container:   1180px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 3rem);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.65rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ══ BACK BAR ══ */
+    .back-bar {
+      background: var(--ink);
+      padding: 0.75rem 0;
+      position: relative;
+      z-index: 5;
+    }
+    .back-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.67rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .back-sep {
+      font-size: 0.58rem;
+      color: rgba(255,255,255,0.18);
+      margin: 0 0.2rem;
+    }
+    .back-current {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.67rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    /* ══ HERO ══ */
+    .page-hero {
+      position: relative;
+      background: var(--ink);
+      min-height: clamp(340px, 50vh, 520px);
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: clamp(2.5rem, 6vw, 5rem);
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(0deg, rgba(26,22,18,0.88) 0%, rgba(26,22,18,0.3) 55%, transparent 100%),
+        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80') center 40%/cover no-repeat;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .page-hero .container { position: relative; z-index: 1; }
+    .page-hero .eyebrow { color: rgba(255,255,255,0.4); }
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 500;
+      line-height: 1.0;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-lead {
+      font-size: clamp(0.88rem, 1.4vw, 0.98rem);
+      color: rgba(255,255,255,0.55);
+      max-width: 44ch;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* ══ ACTIVITIES ══ */
+    .activities-section {
+      padding: var(--section-gap) 0;
+    }
+
+    .section-intro {
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .section-intro h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .section-intro h2 em { font-style: italic; color: var(--gold); }
+    .section-intro p {
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      max-width: 50ch;
+      line-height: 1.75;
+    }
+
+    .activities-stack {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(26,22,18,0.1);
+    }
+
+    .activity-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+      border-bottom: 1px solid rgba(26,22,18,0.1);
+    }
+    .activity-card:last-child { border-bottom: none; }
+    .activity-card.flip { direction: rtl; }
+    .activity-card.flip > * { direction: ltr; }
+
+    .card-visual {
+      position: relative;
+      overflow: hidden;
+    }
+    .card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .activity-card:hover .card-visual img { transform: scale(1.04); }
+
+    .card-tag {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      background: rgba(26,22,18,0.68);
+      backdrop-filter: blur(5px);
+      color: rgba(255,255,255,0.82);
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.65rem;
+    }
+    .activity-card.flip .card-tag { left: auto; right: 1.25rem; }
+
+    .card-index {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 7rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.09);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .activity-card.flip .card-index { right: auto; left: 1rem; }
+
+    .card-content {
+      padding: clamp(2rem, 4vw, 3.25rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fff;
+    }
+
+    /* activity icon box */
+    .act-icon {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(184,147,42,0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .card-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+      font-weight: 500;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+    .card-content h3 em { font-style: italic; color: var(--gold); }
+
+    .card-where {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+    .card-where svg { color: var(--gold); opacity: 0.65; flex-shrink: 0; }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      line-height: 1.82;
+      margin-bottom: 1.4rem;
+    }
+
+    .card-pills {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.6rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.26rem 0.65rem;
+      border: 1px solid rgba(26,22,18,0.1);
+      background: var(--parchment);
+      font-size: 0.69rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+    }
+    .pill svg { color: var(--gold); opacity: 0.75; flex-shrink: 0; }
+
+    .pkg-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      padding-bottom: 0.55rem;
+      margin-bottom: 0.55rem;
+      border-bottom: 1px solid rgba(26,22,18,0.08);
+    }
+
+    .pkg-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 1.75rem;
+    }
+
+    .pkg-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.65rem 0.85rem;
+      background: var(--parchment);
+      border-left: 2px solid transparent;
+      transition: background 0.17s, border-color 0.17s;
+      cursor: default;
+    }
+    .pkg-row:hover { background: rgba(184,147,42,0.07); border-left-color: var(--gold); }
+
+    .pkg-info { flex: 1; min-width: 0; }
+    .pkg-name {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .pkg-sub {
+      font-size: 0.69rem;
+      color: var(--ink-light);
+      margin-top: 0.1rem;
+    }
+    .pkg-price { text-align: right; flex-shrink: 0; }
+    .pkg-price strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .pkg-price span {
+      font-size: 0.6rem;
+      color: var(--ink-light);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      align-self: flex-start;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.73rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.5rem;
+      transition: background 0.2s, gap 0.2s;
+    }
+    .card-btn:hover { background: var(--gold); gap: 0.85rem; }
+
+    @media (max-width: 860px) {
+      .activity-card,
+      .activity-card.flip { grid-template-columns: 1fr; direction: ltr; min-height: auto; }
+      .card-visual { height: 240px; }
+      .activity-card.flip .card-tag { right: auto; left: 1.25rem; }
+      .activity-card.flip .card-index { left: auto; right: 1rem; }
+    }
+
+    /* ══ EXPLORE MORE ══ */
+    .explore-section {
+      padding: var(--section-gap) 0;
+      background: var(--parchment);
+      border-top: 1px solid rgba(26,22,18,0.08);
+    }
+    .explore-header { margin-bottom: 2.5rem; }
+    .explore-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .explore-header h2 em { font-style: italic; color: var(--gold); }
+    .explore-header p {
+      font-size: 0.87rem;
+      color: var(--ink-light);
+      margin-top: 0.4rem;
+    }
+
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(26,22,18,0.1);
+      border: 1px solid rgba(26,22,18,0.1);
+    }
+    @media (max-width: 700px) { .explore-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 440px) { .explore-grid { grid-template-columns: 1fr; } }
+
+    .explore-card {
+      background: var(--cream);
+      padding: 2rem 1.75rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .explore-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .explore-card:hover { background: #fff; }
+    .explore-card:hover::after { width: 100%; }
+
+    .explore-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(26,22,18,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .explore-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .explore-desc {
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .explore-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 0.25rem;
+    }
+
+    /* ══ CONTACT BAND ══ */
+    .contact-band {
+      background: var(--ink);
+      padding: 3.5rem 0;
+    }
+    .contact-band-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .contact-band h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .contact-band h3 em { font-style: italic; color: var(--gold-light); }
+    .contact-band p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.3rem;
+    }
+    .contact-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; flex-shrink: 0; }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.73rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.55rem;
+      transition: background 0.2s;
+    }
+    .btn-gold:hover { background: var(--gold-light); }
+
+    .btn-outline-w {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 0.73rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.55rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline-w:hover { border-color: var(--gold-light); color: var(--gold-light); }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- ── Breadcrumb / Back ── -->
+  <div class="back-bar">
+    <div class="container">
+      <a href="/" class="back-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Home
+      </a>
+      <span class="back-sep">/</span>
+      <span class="back-current">Activities</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Adventures · Nepal</span>
+        <h1 class="reveal">Activities &amp;<br><em>Adventures</em></h1>
+        <p class="hero-lead reveal reveal-delay-1">
+          Nepal beyond the summit. Soar above Pokhara, touch Everest by air, run wild rivers, 
+          track rhinos through the Terai — every adventure arranged from start to finish.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Activity Cards ── -->
+    <section class="activities-section">
+      <div class="container">
+
+        <div class="section-intro reveal">
+          <span class="eyebrow">What We Offer</span>
+          <h2>Four ways to <em>experience</em> Nepal</h2>
+          <p>Each activity is run by licensed, locally-based specialists. We handle permits, transfers and logistics so you just show up.</p>
+        </div>
+
+        <div class="activities-stack">
+
+          <!-- 1. PARAGLIDING -->
+          <div class="activity-card reveal">
+            <div class="card-visual">
+              <span class="card-tag">Most Popular</span>
+              <span class="card-index">01</span>
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=900&q=80"
+                alt="Paragliding over Phewa Lake with Annapurna range, Pokhara"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-content">
+              <div class="act-icon">
+                <!-- wind / paraglider wings icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12c-3.5-4-8-6-10-6S3.5 8 0 12"/>
+                  <path d="M12 6c0 0-2 3-2 8"/>
+                  <path d="M12 6c0 0 2 3 2 8"/>
+                  <path d="M10 14l2 4 2-4"/>
+                </svg>
+              </div>
+              <h3>Paragliding<br><em>Pokhara</em></h3>
+              <div class="card-where">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                Sarangkot, Pokhara &nbsp;·&nbsp; Oct – May
+              </div>
+              <p class="card-desc">
+                Launch from Sarangkot and drift above Phewa Lake while the Annapurna massif fills 
+                the entire horizon. Tandem flights for all experience levels with ACRO-certified pilots. 
+                The most-requested single activity in Nepal — there is a reason for that.
+              </p>
+              <div class="card-pills">
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  20 – 60 min flight
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  Ages 10 and up
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                  GoPro video available
+                </span>
+              </div>
+              <p class="pkg-label">Packages</p>
+              <div class="pkg-list">
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Sunrise Tandem Flight</div>
+                    <div class="pkg-sub">~30 min · Sarangkot launch · shared pilot</div>
+                  </div>
+                  <div class="pkg-price"><strong>$85</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Extended Panorama Flight</div>
+                    <div class="pkg-sub">~60 min · thermal soaring · GoPro video</div>
+                  </div>
+                  <div class="pkg-price"><strong>$130</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Sunrise Flight + Lake Breakfast</div>
+                    <div class="pkg-sub">Flight · Phewa rowboat · breakfast included</div>
+                  </div>
+                  <div class="pkg-price"><strong>$195</strong><span>per person</span></div>
+                </div>
+              </div>
+              <a href="/contact?activity=paragliding" class="card-btn">
+                Enquire
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. HELICOPTER TOUR -->
+          <div class="activity-card flip reveal">
+            <div class="card-visual">
+              <span class="card-tag">Premium</span>
+              <span class="card-index">02</span>
+              <img
+                src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=900&q=80"
+                alt="Helicopter over Himalayan glacier near Everest Base Camp"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-content">
+              <div class="act-icon">
+                <!-- helicopter rotor icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 9h20"/>
+                  <path d="M12 9V5"/>
+                  <path d="M8 9c0 2.5 1.8 4.5 4 5s4-2.5 4-5"/>
+                  <path d="M10 14l-2 4M14 14l2 4"/>
+                  <path d="M7 5l-3-2M17 5l3-2"/>
+                </svg>
+              </div>
+              <h3>Helicopter<br><em>Tour</em></h3>
+              <div class="card-where">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                Kathmandu · Everest / Annapurna / Langtang
+              </div>
+              <p class="card-desc">
+                Reach Everest Base Camp in a morning without weeks on the trail. Our flights offer 
+                360° Himalayan views, a champagne breakfast at altitude, and an optional landing 
+                at Kala Patthar — the fastest route to the roof of the world, by a considerable margin.
+              </p>
+              <div class="card-pills">
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  4 – 7 hours
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  Max 5 per helicopter
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  EBC landing option
+                </span>
+              </div>
+              <p class="pkg-label">Packages</p>
+              <div class="pkg-list">
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Everest Base Camp Classic</div>
+                    <div class="pkg-sub">EBC + Kala Patthar landing · champagne breakfast</div>
+                  </div>
+                  <div class="pkg-price"><strong>$1,100</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Annapurna Base Camp Flight</div>
+                    <div class="pkg-sub">Pokhara departure · ABC landing · return same day</div>
+                  </div>
+                  <div class="pkg-price"><strong>$650</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Private Charter</div>
+                    <div class="pkg-sub">Full-day exclusive · custom route · luxury hamper</div>
+                  </div>
+                  <div class="pkg-price"><strong>$4,200</strong><span>charter</span></div>
+                </div>
+              </div>
+              <a href="/contact?activity=helicopter" class="card-btn">
+                Enquire
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. WHITE WATER RAFTING -->
+          <div class="activity-card reveal">
+            <div class="card-visual">
+              <span class="card-tag">Adrenaline</span>
+              <span class="card-index">03</span>
+              <img
+                src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=900&q=80"
+                alt="White water rafting on the Trishuli River, Nepal"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-content">
+              <div class="act-icon">
+                <!-- water waves icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5s2.5 2 5 2 2.5-2 5-2 2.5 2 2.5 2"/>
+                  <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 2.5 2"/>
+                  <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 2.5 2"/>
+                </svg>
+              </div>
+              <h3>White Water<br><em>Rafting</em></h3>
+              <div class="card-where">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                Trishuli · Seti · Bhote Koshi &nbsp;·&nbsp; Sep – Nov best
+              </div>
+              <p class="card-desc">
+                Nepal's rivers pour straight from glaciers through gorges no road can reach. 
+                Choose your grade — family-friendly Class II on the Seti or the roaring Class IV–V 
+                Bhote Koshi. Multi-day trips include riverside camps beneath open Himalayan skies.
+              </p>
+              <div class="card-pills">
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  1 – 5 days
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  Ages 14+ for Class IV
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Camp included (multi-day)
+                </span>
+              </div>
+              <p class="pkg-label">Packages</p>
+              <div class="pkg-list">
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Trishuli Day Trip</div>
+                    <div class="pkg-sub">Grade III · family-friendly · lunch and transfer</div>
+                  </div>
+                  <div class="pkg-price"><strong>$55</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Bhote Koshi Thrill</div>
+                    <div class="pkg-sub">Grade IV–V · 2 days · riverside camp · all meals</div>
+                  </div>
+                  <div class="pkg-price"><strong>$145</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Karnali River Expedition</div>
+                    <div class="pkg-sub">5 days · remote gorge · Grade IV · full board</div>
+                  </div>
+                  <div class="pkg-price"><strong>$420</strong><span>per person</span></div>
+                </div>
+              </div>
+              <a href="/contact?activity=rafting" class="card-btn">
+                Enquire
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. CHITWAN JUNGLE SAFARI -->
+          <div class="activity-card flip reveal">
+            <div class="card-visual">
+              <span class="card-tag">UNESCO Heritage</span>
+              <span class="card-index">04</span>
+              <img
+                src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=900&q=80"
+                alt="Greater one-horned rhinoceros in Chitwan National Park"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-content">
+              <div class="act-icon">
+                <!-- leaf / nature icon for jungle -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 8C8 10 5.9 16.17 3.82 19.34C3.1 20.4 4.41 21.5 5.33 20.71C7.69 18.68 11.21 16.57 17 16C17 16 21 15.38 21 11C21 6.24 17 3 17 3C17 3 17 6.33 17 8z"/>
+                  <path d="M3.83 19.33c2.06-2.29 5.9-5.5 13.17-3.33"/>
+                </svg>
+              </div>
+              <h3>Chitwan<br><em>Jungle Safari</em></h3>
+              <div class="card-where">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                Chitwan National Park, Sauraha &nbsp;·&nbsp; All year
+              </div>
+              <p class="card-desc">
+                Swap altitude for latitude. In the Terai lowlands, one-horned rhinos wade through 
+                tall grass, gharial crocodiles bask on river banks, and Bengal tigers leave prints 
+                in the dawn dust. Canoe, jeep and walking safaris cover every corner of this UNESCO 
+                World Heritage jungle.
+              </p>
+              <div class="card-pills">
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  2 – 4 nights
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                  200+ bird species
+                </span>
+                <span class="pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 17l4-9 5 4 3-4 5 9H3z"/></svg>
+                  Jeep + canoe safari
+                </span>
+              </div>
+              <p class="pkg-label">Packages</p>
+              <div class="pkg-list">
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Chitwan Weekend Escape</div>
+                    <div class="pkg-sub">2 nights · jeep safari · canoe · jungle walk</div>
+                  </div>
+                  <div class="pkg-price"><strong>$220</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Classic Chitwan Safari</div>
+                    <div class="pkg-sub">3 nights · all safaris · Tharu culture evening</div>
+                  </div>
+                  <div class="pkg-price"><strong>$310</strong><span>per person</span></div>
+                </div>
+                <div class="pkg-row">
+                  <div class="pkg-info">
+                    <div class="pkg-name">Luxury Lodge Immersion</div>
+                    <div class="pkg-sub">4 nights · boutique lodge · private guide · full board</div>
+                  </div>
+                  <div class="pkg-price"><strong>$580</strong><span>per person</span></div>
+                </div>
+              </div>
+              <a href="/contact?activity=chitwan" class="card-btn">
+                Enquire
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /.activities-stack -->
+      </div>
+    </section>
+
+    <!-- ── Explore More (leads back to other sections) ── -->
+    <section class="explore-section">
+      <div class="container">
+        <div class="explore-header reveal">
+          <span class="eyebrow">Keep Exploring</span>
+          <h2>More from <em>Beyond Summit</em></h2>
+          <p>Everything we do across Nepal, under one roof.</p>
+        </div>
+        <div class="explore-grid">
+
+          <a href="/treks" class="explore-card reveal">
+            <div class="explore-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17l4-8 5 3 3-5 5 9H3z"/>
+                <circle cx="17" cy="5" r="2"/>
+              </svg>
+            </div>
+            <div class="explore-name">Trekking</div>
+            <div class="explore-desc">Everest Base Camp, Annapurna Circuit, Langtang and off-the-map routes. All permits arranged.</div>
+            <div class="explore-arrow">
+              View treks
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <a href="/climbing" class="explore-card reveal reveal-delay-1">
+            <div class="explore-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 19h20L12 2z"/>
+                <path d="M12 9v4M10 17h4"/>
+              </svg>
+            </div>
+            <div class="explore-name">Mountaineering</div>
+            <div class="explore-desc">Island Peak, Mera Peak, Lobuche East and full expedition support for all levels of alpinist.</div>
+            <div class="explore-arrow">
+              View climbs
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <a href="/cultural-tours" class="explore-card reveal reveal-delay-2">
+            <div class="explore-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4"/>
+                <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              </svg>
+            </div>
+            <div class="explore-name">Cultural Tours</div>
+            <div class="explore-desc">Kathmandu Valley's Durbar Squares, Bhaktapur, Patan and private monastery access.</div>
+            <div class="explore-arrow">
+              View tours
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact band ── -->
+    <section class="contact-band">
+      <div class="container">
+        <div class="contact-band-inner reveal">
+          <div>
+            <h3>Planning a trip to <em>Nepal?</em></h3>
+            <p>We reply within 24 hours. Based in Thamel, Kathmandu.</p>
+          </div>
+          <div class="contact-actions">
+            <a href="/contact" class="btn-gold">
+              Get a Free Quote
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="tel:+9779811157421" class="btn-outline-w">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 21.73 16.92z"/></svg>
+              +977 981 115 7421
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="contact-strip-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+  <script src="/js/main.js"></script>
+
+  <script>
+    if (typeof BSE !== 'undefined') {
+      BSE.loadAll([
+        { selector: '#nav-placeholder',           url: '/components/nav.html' },
+        { selector: '#contact-strip-placeholder', url: '/components/contact-strip.html' },
+        { selector: '#footer-placeholder',        url: '/components/footer.html' },
+      ]);
+    }
+  </script>
+
+  <script>
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+
+</body>
+</html>

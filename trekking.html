@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+
+  <title>Himalayan Trekking Packages Nepal 2026 | Beyond Summit Expeditions</title>
+  <meta name="description" content="Explore Nepal's finest trekking routes — Everest Base Camp, Annapurna Circuit, Upper Mustang, Manaslu & more. Expert Sherpa-guided treks for all levels.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.beyondsummitexped.com/trekking.html">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Himalayan Trekking Nepal | Beyond Summit Expeditions">
+  <meta property="og:description" content="Classic & off-the-beaten-path treks across Nepal. EBC, Annapurna, Manaslu, Upper Mustang & more. Expert Sherpa guides, small groups.">
+  <meta property="og:image"       content="https://www.beyondsummitexped.com/assets/og-image.jpg">
+  <meta property="og:url"         content="https://www.beyondsummitexped.com/trekking.html">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&family=Courier+Prime:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/nav.css">
+
+  <style>
+    /* ══ PAGE HERO ══ */
+    .trek-hero {
+      position: relative;
+      background: var(--ink);
+      padding: clamp(5rem, 12vw, 9rem) 0 clamp(3rem, 6vw, 5rem);
+      overflow: hidden;
+    }
+    .trek-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('/assets/images/annapurna-circuit-mountain-range.jpg') center/cover no-repeat;
+      opacity: 0.18;
+      filter: saturate(0.4);
+    }
+    .trek-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(200,100,26,0.08) 0%, transparent 55%),
+                  linear-gradient(to top, var(--ink) 0%, transparent 50%);
+    }
+    .trek-hero .container { position: relative; z-index: 2; }
+
+    .hero-breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: rgba(255,255,255,0.28);
+      margin-bottom: 1.5rem;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.28); transition: color 0.3s; }
+    .hero-breadcrumb a:hover { color: var(--amber-pale); }
+    .hero-breadcrumb span { color: var(--amber); }
+
+    .trek-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 300;
+      line-height: 0.88;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .trek-hero h1 em { font-style: italic; color: var(--amber-pale); }
+
+    .trek-hero p {
+      font-family: var(--sans); font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+      font-weight: 300; color: rgba(255,255,255,0.5);
+      max-width: 540px; line-height: 1.8; margin-bottom: 2.5rem;
+    }
+
+    .hero-stats {
+      display: flex; gap: clamp(1.5rem, 4vw, 3rem); flex-wrap: wrap;
+    }
+    .hero-stat-item {
+      display: flex; flex-direction: column; gap: 0.2rem;
+    }
+    .hero-stat-val {
+      font-family: var(--serif); font-size: 1.8rem; font-weight: 400;
+      color: var(--amber-pale); line-height: 1; letter-spacing: -0.02em;
+    }
+    .hero-stat-key {
+      font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(255,255,255,0.28);
+    }
+
+    /* ══ FILTER BAR ══ */
+    .filter-bar {
+      background: var(--warm-white);
+      border-bottom: 1px solid rgba(14,12,10,0.07);
+      position: sticky; top: 60px; z-index: 50;
+    }
+    .filter-inner {
+      display: flex; align-items: center;
+      gap: 0; overflow-x: auto; scrollbar-width: none;
+      padding: 0 clamp(1.25rem, 5vw, 4rem);
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-btn {
+      font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--mist);
+      padding: 1.1rem 1.25rem; border-bottom: 2px solid transparent;
+      transition: color 0.3s, border-color 0.3s; white-space: nowrap;
+      cursor: pointer; background: none; border-left: none; border-right: none; border-top: none;
+    }
+    .filter-btn:hover { color: var(--amber); }
+    .filter-btn.active { color: var(--amber); border-bottom-color: var(--amber); }
+
+    /* ══ TREK GRID ══ */
+    .trek-grid-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+
+    .treks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1.25rem, 2.5vw, 2rem);
+    }
+
+    /* ── Grid card ── */
+    .tgcard {
+      display: flex; flex-direction: column;
+      background: var(--warm-white);
+      border: 1px solid rgba(14,12,10,0.07);
+      overflow: hidden;
+      transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+      text-decoration: none; color: inherit;
+      position: relative;
+    }
+    .tgcard:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .tgcard-img {
+      position: relative; overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .tgcard-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 1.6s var(--ease-out), filter 0.5s;
+      filter: brightness(0.88) saturate(1.05);
+    }
+    .tgcard:hover .tgcard-img img {
+      transform: scale(1.06);
+      filter: brightness(0.98) saturate(1.1);
+    }
+    .tgcard-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,8,6,0.55) 0%, transparent 55%);
+    }
+
+    /* Difficulty pill on image */
+    .tgcard-diff {
+      position: absolute; top: 0.875rem; left: 0.875rem;
+      font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 0.3rem 0.7rem;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+    .diff-easy     { background: rgba(45,74,62,0.85); color: #7ecba0; }
+    .diff-moderate { background: rgba(200,100,26,0.2); color: var(--amber-pale); border: 1px solid rgba(200,100,26,0.35); }
+    .diff-hard     { background: rgba(14,12,10,0.75); color: rgba(255,255,255,0.7); }
+
+    /* Alt badge bottom-right */
+    .tgcard-alt {
+      position: absolute; bottom: 0.75rem; right: 0.875rem;
+      font-family: var(--mono); font-size: 0.65rem; color: var(--amber-pale); letter-spacing: 0.05em;
+    }
+
+    .tgcard-body { padding: 1.375rem 1.5rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+
+    .tgcard-tag {
+      font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 0.5rem;
+    }
+    .tgcard-name {
+      font-family: var(--serif); font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+      font-weight: 400; color: var(--ink); line-height: 1.1; margin-bottom: 0.625rem;
+    }
+    .tgcard-desc {
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 300;
+      color: var(--stone); line-height: 1.7; flex: 1; margin-bottom: 1.25rem;
+    }
+
+    .tgcard-meta {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem; padding-top: 1rem;
+      border-top: 1px solid rgba(14,12,10,0.07);
+      margin-bottom: 1.125rem;
+    }
+    .tgcard-meta-item { display: flex; flex-direction: column; gap: 0.15rem; }
+    .tgcard-meta-val {
+      font-family: var(--mono); font-size: 0.78rem; color: var(--ink); font-weight: 400;
+    }
+    .tgcard-meta-key {
+      font-family: var(--mono); font-size: 0.44rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--mist);
+    }
+
+    .tgcard-seasons {
+      display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.25rem;
+    }
+    .season-pill {
+      font-family: var(--mono); font-size: 0.44rem; letter-spacing: 0.12em;
+      text-transform: uppercase; background: var(--cream);
+      color: var(--stone); padding: 0.25rem 0.6rem; border-radius: 1px;
+    }
+    .season-pill.best { background: rgba(200,100,26,0.1); color: var(--amber); }
+
+    .tgcard-cta {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .tgcard-price {
+      font-family: var(--serif); font-size: 1.2rem; color: var(--ink); letter-spacing: -0.01em;
+    }
+    .tgcard-price span { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.1em; color: var(--mist); display: block; }
+
+    .tgcard-link {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+      color: var(--amber); transition: gap 0.3s;
+    }
+    .tgcard:hover .tgcard-link { gap: 0.75rem; }
+    .tgcard-link svg { flex-shrink: 0; transition: transform 0.3s var(--ease-out); }
+    .tgcard:hover .tgcard-link svg { transform: translateX(4px); }
+
+    /* ── Featured (wide) card ── */
+    .tgcard.wide {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+    .tgcard.wide .tgcard-img { aspect-ratio: auto; flex: 0 0 48%; }
+    .tgcard.wide .tgcard-body { padding: clamp(1.5rem, 3vw, 2.25rem); }
+
+    /* ── Empty state if filter returns nothing ── */
+    .no-results {
+      grid-column: 1/-1; text-align: center; padding: 5rem 1rem;
+      display: none;
+    }
+    .no-results.visible { display: block; }
+    .no-results-icon { font-family: var(--serif); font-size: 3rem; color: var(--mist); margin-bottom: 1rem; }
+    .no-results h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--stone); margin-bottom: 0.5rem; }
+    .no-results p  { font-family: var(--sans); font-size: 0.82rem; color: var(--mist); }
+
+    /* ══ QUOTE BANNER (social follow) ══ */
+    .follow-banner {
+      position: relative; overflow: hidden;
+      min-height: clamp(380px, 55vh, 520px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .follow-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 60%;
+      filter: brightness(0.22) saturate(0.5) grayscale(0.3);
+    }
+    .follow-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,8,6,0.6) 0%, rgba(10,8,6,0.3) 50%, rgba(10,8,6,0.7) 100%);
+    }
+    .follow-content {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 6vw, 3rem);
+    }
+    .follow-label {
+      font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(255,255,255,0.28);
+      margin-bottom: 0.75rem;
+    }
+    .follow-title {
+      font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300; color: #fff; line-height: 1.15; margin-bottom: 0.5rem;
+    }
+    .follow-title em { font-style: italic; color: var(--amber-pale); font-weight: 400; }
+    .follow-sub {
+      font-family: var(--sans); font-size: 0.85rem; font-weight: 300;
+      color: rgba(255,255,255,0.38); margin-bottom: 2.5rem;
+    }
+
+    .social-follow-grid {
+      display: grid; grid-template-columns: repeat(2, auto);
+      gap: 1rem 2rem; justify-content: center; max-width: 380px; margin: 0 auto;
+    }
+    .social-follow-btn {
+      display: flex; align-items: center; gap: 0.875rem;
+      font-family: var(--sans); font-size: 0.82rem; font-weight: 400;
+      color: rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.75rem 1.375rem;
+      transition: color 0.35s, border-color 0.35s, background 0.35s, transform 0.35s;
+      text-decoration: none;
+    }
+    .social-follow-btn:hover {
+      color: #fff; border-color: var(--amber);
+      background: rgba(200,100,26,0.1);
+      transform: translateY(-2px);
+    }
+    .social-follow-btn svg { flex-shrink: 0; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 1024px) {
+      .treks-grid { grid-template-columns: repeat(2, 1fr); }
+      .tgcard.wide { grid-column: span 2; }
+    }
+    @media (max-width: 768px) {
+      .treks-grid { grid-template-columns: 1fr; }
+      .tgcard.wide { flex-direction: column; grid-column: span 1; }
+      .tgcard.wide .tgcard-img { flex: none; aspect-ratio: 4/3; }
+      .tgcard.wide .tgcard-meta { grid-template-columns: repeat(3, 1fr); }
+      .hero-stats { gap: 1.5rem; }
+      .social-follow-grid { grid-template-columns: 1fr; max-width: 260px; }
+    }
+    @media (max-width: 480px) {
+      .tgcard-meta { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV PLACEHOLDER -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+
+    <!-- ══ HERO ══ -->
+    <section class="trek-hero">
+      <div class="container">
+        <div class="hero-breadcrumb">
+          <a href="/">Home</a>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          <span>Trekking</span>
+        </div>
+        <h1 class="reveal">Walk the <em>Himalayas</em></h1>
+        <p class="reveal reveal-delay-1">
+          Follow ancient Sherpa trade routes through rhododendron forests, glacial valleys, and living mountain culture. From first-time trekkers to seasoned high-altitude hikers — a route for every soul.
+        </p>
+        <div class="hero-stats reveal reveal-delay-2">
+          <div class="hero-stat-item">
+            <div class="hero-stat-val">18+</div>
+            <div class="hero-stat-key">Trek Routes</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-val">6,189m</div>
+            <div class="hero-stat-key">Highest Trekking Peak</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-val">4 Days</div>
+            <div class="hero-stat-key">Shortest Trek</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-val">100%</div>
+            <div class="hero-stat-key">Safety Record</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FILTER BAR ══ -->
+    <div class="filter-bar" id="filterBar">
+      <div class="filter-inner">
+        <button class="filter-btn active" data-filter="all">All Treks</button>
+        <button class="filter-btn" data-filter="everest">Everest Region</button>
+        <button class="filter-btn" data-filter="annapurna">Annapurna</button>
+        <button class="filter-btn" data-filter="remote">Remote &amp; Restricted</button>
+        <button class="filter-btn" data-filter="easy">Easy &amp; Moderate</button>
+        <button class="filter-btn" data-filter="peak">Peak Climbing</button>
+      </div>
+    </div>
+
+    <!-- ══ TREK GRID ══ -->
+    <section class="trek-grid-section">
+      <div class="container">
+        <div class="treks-grid" id="treksGrid">
+
+          <!-- ── 1. EBC (WIDE FEATURED) ── -->
+          <a href="/treks/everest-base-camp-trek.html"
+             class="tgcard wide reveal"
+             data-category="everest easy">
+            <div class="tgcard-img">
+              <img src="/assets/images/everest-base-camp-5364m-photo.jpg"
+                   alt="Everest Base Camp Trek — Khumbu, Nepal"
+                   loading="eager">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-moderate">Moderate</span>
+              <span class="tgcard-alt">5,364 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">01 · Khumbu, Nepal</div>
+              <h2 class="tgcard-name">Everest Base Camp Trek</h2>
+              <p class="tgcard-desc">Nepal's most iconic trail. Walk through Sherpa villages, past Tengboche Monastery and the famous Khumbu icefall, to stand at the foot of the world's highest mountain. A journey that changes you.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">14 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">5,364 m</div>
+                  <div class="tgcard-meta-key">Max Altitude</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">130 km</div>
+                  <div class="tgcard-meta-key">Total Distance</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Mar–May</span>
+                <span class="season-pill best">★ Oct–Nov</span>
+                <span class="season-pill">Dec–Feb</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price">
+                  <span>From</span>
+                  $1,650
+                </div>
+                <span class="tgcard-link">
+                  View Trek
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 2. Annapurna Circuit ── -->
+          <a href="/treks/annapurna-circuit-trek.html"
+             class="tgcard reveal reveal-delay-1"
+             data-category="annapurna">
+            <div class="tgcard-img">
+              <img src="/assets/images/annapurna-circuit-mountain-range.jpg"
+                   alt="Annapurna Circuit Trek — Thorong La Pass"
+                   loading="lazy">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-moderate">Moderate</span>
+              <span class="tgcard-alt">5,416 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">02 · Gandaki Region</div>
+              <h2 class="tgcard-name">Annapurna Circuit</h2>
+              <p class="tgcard-desc">Nepal's most diverse landscape in one breathtaking loop. Subtropical forests, high desert, and legendary Thorong La pass.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">18 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">5,416 m</div>
+                  <div class="tgcard-meta-key">Max Altitude</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">160 km</div>
+                  <div class="tgcard-meta-key">Distance</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Oct–Nov</span>
+                <span class="season-pill best">★ Mar–Apr</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$1,350</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 3. Annapurna Base Camp ── -->
+          <a href="/treks/annapurna-base-camp-trek.html"
+             class="tgcard reveal reveal-delay-2"
+             data-category="annapurna easy">
+            <div class="tgcard-img">
+              <img src="/assets/images/annapurna-circuit-mountain-range.jpg"
+                   alt="Annapurna Base Camp Trek — 4130m"
+                   loading="lazy"
+                   style="object-position: center 30%">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-easy">Easy–Moderate</span>
+              <span class="tgcard-alt">4,130 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">03 · Annapurna Sanctuary</div>
+              <h2 class="tgcard-name">Annapurna Base Camp</h2>
+              <p class="tgcard-desc">Walk into the heart of the Annapurna massif. A classic bowl-shaped sanctuary ringed by eight giants, accessible to all fitness levels.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">12 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">4,130 m</div>
+                  <div class="tgcard-meta-key">Max Altitude</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">115 km</div>
+                  <div class="tgcard-meta-key">Distance</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Oct–Dec</span>
+                <span class="season-pill best">★ Feb–May</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$1,150</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 4. Upper Mustang ── -->
+          <a href="/treks/upper-mustang-trek.html"
+             class="tgcard reveal"
+             data-category="remote">
+            <div class="tgcard-img">
+              <img src="/assets/images/upper-mustang-trek-landscape.jpg"
+                   alt="Upper Mustang Restricted Area Trek — Lo Manthang"
+                   loading="lazy">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-moderate">Moderate</span>
+              <span class="tgcard-alt">3,840 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">04 · Lo Manthang · Restricted</div>
+              <h2 class="tgcard-name">Upper Mustang</h2>
+              <p class="tgcard-desc">A Tibetan kingdom frozen in time. Cave temples carved into ochre cliffs, prayer-flag-draped villages, and the walled city of Lo Manthang.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">14 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">3,840 m</div>
+                  <div class="tgcard-meta-key">Max Altitude</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">Year-Round</div>
+                  <div class="tgcard-meta-key">Season</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Year-Round</span>
+                <span class="season-pill">Special Permit</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$2,850</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 5. Manaslu Circuit ── -->
+          <a href="/treks/manaslu-circuit-trek.html"
+             class="tgcard reveal reveal-delay-1"
+             data-category="remote">
+            <div class="tgcard-img">
+              <img src="/assets/images/manaslu-mountain-himalaya-nepal.jpg"
+                   alt="Manaslu Circuit Trek — Larkya La Pass 5160m"
+                   loading="lazy">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-hard">Challenging</span>
+              <span class="tgcard-alt">5,160 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">05 · Gorkha District · Restricted</div>
+              <h2 class="tgcard-name">Manaslu Circuit</h2>
+              <p class="tgcard-desc">Nepal's last great wilderness circuit. Wild Larkya La pass, remote Nubri villages, and zero crowds — the Annapurna Circuit of a generation ago.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">16 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">5,160 m</div>
+                  <div class="tgcard-meta-key">Max Altitude</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">177 km</div>
+                  <div class="tgcard-meta-key">Distance</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Sep–Nov</span>
+                <span class="season-pill best">★ Mar–May</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$1,580</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 6. Langtang ── -->
+          <a href="/treks/langtang-valley-trek.html"
+             class="tgcard reveal reveal-delay-2"
+             data-category="easy">
+            <div class="tgcard-img">
+              <img src="/assets/images/langtang-landscape-nepal-mountain.jpg"
+                   alt="Langtang Valley Trek — closest Himalayan trek to Kathmandu"
+                   loading="lazy">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-easy">Easy–Moderate</span>
+              <span class="tgcard-alt">4,984 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">06 · Langtang Region</div>
+              <h2 class="tgcard-name">Langtang Valley</h2>
+              <p class="tgcard-desc">Closest major trek to Kathmandu. Yak pastures, Tamang culture, and glacier-carved valleys in 10 perfect days — ideal for a first Himalayan experience.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">10 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">4,984 m</div>
+                  <div class="tgcard-meta-key">Max Altitude</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">75 km</div>
+                  <div class="tgcard-meta-key">Distance</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Oct–Nov</span>
+                <span class="season-pill best">★ Mar–May</span>
+                <span class="season-pill">Dec–Feb</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$980</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 7. Island Peak ── -->
+          <a href="/treks/island-peak-climbing.html"
+             class="tgcard reveal"
+             data-category="everest peak">
+            <div class="tgcard-img">
+              <img src="/assets/images/mera-peak-mountain-climb.jpg"
+                   alt="Island Peak Climbing — 6189m Nepal"
+                   loading="lazy">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-hard">Challenging</span>
+              <span class="tgcard-alt">6,189 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">07 · Everest Region · Peak</div>
+              <h2 class="tgcard-name">Island Peak Climb</h2>
+              <p class="tgcard-desc">A genuine mountaineering objective combined with the EBC trek. Technical glacier travel and your first taste of 6000m climbing.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">20 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">6,189 m</div>
+                  <div class="tgcard-meta-key">Summit</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">Technical</div>
+                  <div class="tgcard-meta-key">Gear</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Oct–Nov</span>
+                <span class="season-pill best">★ Mar–May</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$2,200</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 8. Mera Peak ── -->
+          <a href="/peaks/mera-peak-climb.html"
+             class="tgcard reveal reveal-delay-1"
+             data-category="everest peak">
+            <div class="tgcard-img">
+              <img src="/assets/images/mera-peak-mountain-climb.jpg"
+                   alt="Mera Peak — Nepal's highest trekking peak 6476m"
+                   loading="lazy">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-hard">Challenging</span>
+              <span class="tgcard-alt">6,476 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">08 · Hinku Valley · Peak</div>
+              <h2 class="tgcard-name">Mera Peak</h2>
+              <p class="tgcard-desc">Nepal's highest trekking peak. Panoramas of five 8000ers from the summit — Everest, Lhotse, Cho Oyu, Makalu, Kanchenjunga — accessible to motivated beginners.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">18 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">6,476 m</div>
+                  <div class="tgcard-meta-key">Summit</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">Beginner</div>
+                  <div class="tgcard-meta-key">Climbing Exp.</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Oct–Nov</span>
+                <span class="season-pill best">★ Mar–May</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$1,950</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- ── 9. Gokyo Lakes (WIDE) ── -->
+          <a href="/treks/gokyo-lakes-trek.html"
+             class="tgcard wide reveal reveal-delay-2"
+             data-category="everest">
+            <div class="tgcard-img">
+              <img src="/assets/images/everest-base-camp-5364m-photo.jpg"
+                   alt="Gokyo Lakes Trek — Everest Region Nepal"
+                   loading="lazy"
+                   style="object-position: center 40%;">
+              <div class="tgcard-img-overlay"></div>
+              <span class="tgcard-diff diff-moderate">Moderate</span>
+              <span class="tgcard-alt">5,357 m</span>
+            </div>
+            <div class="tgcard-body">
+              <div class="tgcard-tag">09 · Khumbu · Gokyo Valley</div>
+              <h2 class="tgcard-name">Gokyo Lakes &amp; Ri</h2>
+              <p class="tgcard-desc">The quiet alternative to EBC. Turquoise glacial lakes, Gokyo Ri summit for Everest panoramas, and the magnificent Ngozumpa Glacier — with far fewer people on the trail.</p>
+              <div class="tgcard-meta">
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">14 Days</div>
+                  <div class="tgcard-meta-key">Duration</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">5,357 m</div>
+                  <div class="tgcard-meta-key">Max Altitude</div>
+                </div>
+                <div class="tgcard-meta-item">
+                  <div class="tgcard-meta-val">110 km</div>
+                  <div class="tgcard-meta-key">Distance</div>
+                </div>
+              </div>
+              <div class="tgcard-seasons">
+                <span class="season-pill best">★ Oct–Nov</span>
+                <span class="season-pill best">★ Mar–May</span>
+                <span class="season-pill">Dec–Feb</span>
+              </div>
+              <div class="tgcard-cta">
+                <div class="tgcard-price"><span>From</span>$1,480</div>
+                <span class="tgcard-link">View Trek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- No results message -->
+          <div class="no-results" id="noResults">
+            <div class="no-results-icon">⛰</div>
+            <h3>No treks match this filter</h3>
+            <p>Try a different category or browse all treks.</p>
+          </div>
+
+        </div><!-- /treks-grid -->
+      </div>
+    </section>
+
+    <!-- ══ SOCIAL FOLLOW BANNER ══ -->
+    <div class="follow-banner">
+      <img class="follow-bg"
+           src="/assets/images/manaslu-mountain-himalaya-nepal.jpg"
+           alt="Himalayan mountains Nepal"
+           loading="lazy">
+      <div class="follow-overlay"></div>
+      <div class="follow-content reveal">
+        <div class="follow-label">Stay Connected</div>
+        <h2 class="follow-title">Keep up to speed,<br>follow <em>@beyondsummit</em></h2>
+        <p class="follow-sub">Expedition updates, trail reports &amp; Himalayan photography from the ground.</p>
+        <div class="social-follow-grid">
+          <a href="https://instagram.com/beyondsummitexpeditions" class="social-follow-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+          <a href="https://youtube.com/@beyondsummitexpeditions" class="social-follow-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube
+          </a>
+          <a href="https://facebook.com/beyondsummitexped" class="social-follow-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="https://tiktok.com/@beyondsummit" class="social-follow-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.49a8.12 8.12 0 004.85 1.6V6.65a4.85 4.85 0 01-1.08.04z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SHARED COMPONENTS -->
+  <div id="contact-strip-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+  <script src="/js/main.js"></script>
+  <script>
+    BSE.loadAll([
+      { selector: '#nav-placeholder',           url: '/components/nav.html' },
+      { selector: '#contact-strip-placeholder', url: '/components/contact-strip.html' },
+      { selector: '#footer-placeholder',        url: '/components/footer.html' },
+    ]);
+
+    /* ── Filter behaviour ── */
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('#treksGrid .tgcard');
+        let visible = 0;
+
+        cards.forEach(card => {
+          const cats = card.dataset.category || '';
+          const match = filter === 'all' || cats.includes(filter);
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+
+        // Show/hide no-results
+        document.getElementById('noResults').classList.toggle('visible', visible === 0);
+      });
+    });
+  </script>
+</body>
+</html>

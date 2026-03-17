@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+
+  <title>Everest Base Camp Trek 2026 — 14 Days | Beyond Summit Expeditions</title>
+  <meta name="description" content="Trek to Everest Base Camp in 14 days. Expert Sherpa guides, small groups, full acclimatisation schedule. From $1,650 per person. Spring & Autumn departures.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.beyondsummitexped.com/treks/everest-base-camp-trek.html">
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Everest Base Camp Trek 14 Days | Beyond Summit Expeditions">
+  <meta property="og:description" content="Nepal's most iconic trail. Expert Sherpa guides, Namche Bazaar, Tengboche, Khumbu icefall. From $1,650.">
+  <meta property="og:image"       content="https://www.beyondsummitexped.com/assets/images/everest-base-camp-5364m-photo.jpg">
+  <meta property="og:url"         content="https://www.beyondsummitexped.com/treks/everest-base-camp-trek.html">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&family=Courier+Prime:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/nav.css">
+
+  <style>
+    /* ══ DETAIL HERO ══ */
+    .detail-hero {
+      position: relative;
+      height: clamp(480px, 75vh, 700px);
+      overflow: hidden;
+      display: flex; align-items: flex-end;
+    }
+    .detail-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%;
+      filter: brightness(0.6) saturate(1.05);
+    }
+    .detail-hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to top, rgba(10,8,6,0.95) 0%, rgba(10,8,6,0.5) 40%, rgba(10,8,6,0.1) 75%, transparent),
+        linear-gradient(105deg, rgba(10,8,6,0.5) 0%, transparent 50%);
+    }
+    .detail-hero-content {
+      position: relative; z-index: 2; width: 100%;
+      padding: 0 0 clamp(2.5rem, 5vh, 4rem);
+    }
+    .detail-breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: rgba(255,255,255,0.3);
+      margin-bottom: 1.25rem;
+    }
+    .detail-breadcrumb a { color: rgba(255,255,255,0.3); transition: color 0.3s; }
+    .detail-breadcrumb a:hover { color: var(--amber-pale); }
+    .detail-breadcrumb span { color: rgba(255,255,255,0.6); }
+
+    .detail-hero-tag {
+      font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--amber-pale);
+      display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.875rem;
+    }
+    .detail-hero-tag::before { content: ''; width: 18px; height: 1px; background: var(--amber-pale); }
+
+    .detail-hero h1 {
+      font-family: var(--serif); font-weight: 300;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.9; letter-spacing: -0.025em;
+      color: #fff; margin-bottom: 1.5rem;
+    }
+    .detail-hero h1 em { font-style: italic; color: var(--amber-pale); }
+
+    .detail-hero-pills {
+      display: flex; align-items: center; gap: 0.625rem; flex-wrap: wrap;
+    }
+    .detail-pill {
+      font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 0.35rem 0.875rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(8px);
+    }
+    .detail-pill.amber { border-color: rgba(200,100,26,0.5); color: var(--amber-pale); background: rgba(200,100,26,0.1); }
+
+    /* ══ STICKY SIDEBAR LAYOUT ══ */
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+
+    /* ── Main content column ── */
+    .detail-main {}
+
+    .detail-section { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .detail-section-label {
+      font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--amber);
+      display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;
+    }
+    .detail-section-label::after { content: ''; flex: 1; height: 1px; background: rgba(14,12,10,0.1); }
+    .detail-section h2 {
+      font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 400;
+      color: var(--ink); line-height: 1.1; margin-bottom: 1rem;
+    }
+    .detail-section h2 em { font-style: italic; color: var(--amber); }
+    .detail-prose {
+      font-family: var(--sans); font-size: 0.9rem; font-weight: 300;
+      color: var(--stone); line-height: 1.85;
+    }
+    .detail-prose p + p { margin-top: 1rem; }
+
+    /* ── Quick stats grid ── */
+    .quick-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border: 1px solid rgba(14,12,10,0.08);
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+    .qs-cell {
+      padding: 1.375rem 1.125rem; text-align: center;
+      border-right: 1px solid rgba(14,12,10,0.08);
+    }
+    .qs-cell:last-child { border-right: none; }
+    .qs-val {
+      font-family: var(--serif); font-size: 1.6rem; font-weight: 400;
+      color: var(--amber); line-height: 1; margin-bottom: 0.25rem;
+    }
+    .qs-key {
+      font-family: var(--mono); font-size: 0.46rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--mist);
+    }
+
+    /* ── Itinerary ── */
+    .itinerary { display: flex; flex-direction: column; gap: 0; }
+    .itin-day {
+      display: grid; grid-template-columns: 52px 1fr;
+      gap: 0 1.375rem;
+      padding-bottom: 0;
+      cursor: pointer;
+    }
+    .itin-day-num-col {
+      display: flex; flex-direction: column; align-items: center;
+      padding-top: 1.25rem;
+    }
+    .itin-day-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1.5px solid rgba(14,12,10,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.08em;
+      color: var(--mist); flex-shrink: 0; transition: all 0.3s;
+      background: var(--warm-white);
+    }
+    .itin-day.open .itin-day-num { border-color: var(--amber); color: var(--amber); background: rgba(200,100,26,0.05); }
+    .itin-connector {
+      flex: 1; width: 1px; background: rgba(14,12,10,0.1);
+      margin: 4px 0; min-height: 24px;
+    }
+    .itin-day:last-child .itin-connector { display: none; }
+
+    .itin-day-body { padding: 1.125rem 0 1.5rem; }
+    .itin-day-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 1rem;
+    }
+    .itin-day-title {
+      font-family: var(--serif); font-size: 1.05rem; font-weight: 400;
+      color: var(--ink); flex: 1; line-height: 1.3;
+    }
+    .itin-day-alt {
+      font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.1em;
+      color: var(--amber); white-space: nowrap; flex-shrink: 0;
+    }
+    .itin-toggle-icon {
+      width: 20px; height: 20px; flex-shrink: 0;
+      color: var(--mist); transition: transform 0.35s var(--ease-out), color 0.3s;
+    }
+    .itin-day.open .itin-toggle-icon { transform: rotate(45deg); color: var(--amber); }
+
+    .itin-day-detail {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.5s var(--ease-out), opacity 0.4s;
+      opacity: 0;
+    }
+    .itin-day.open .itin-day-detail { max-height: 400px; opacity: 1; }
+    .itin-day-detail p {
+      font-family: var(--sans); font-size: 0.82rem; font-weight: 300;
+      color: var(--stone); line-height: 1.8; padding-top: 0.625rem;
+    }
+    .itin-meta-chips {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.625rem;
+    }
+    .itin-chip {
+      font-family: var(--mono); font-size: 0.44rem; letter-spacing: 0.12em;
+      text-transform: uppercase; background: var(--cream); color: var(--stone);
+      padding: 0.22rem 0.55rem;
+    }
+
+    /* ── Includes / Excludes ── */
+    .inc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .inc-col h4 {
+      font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 0.875rem;
+    }
+    .inc-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .inc-item {
+      display: flex; align-items: flex-start; gap: 0.625rem;
+      font-family: var(--sans); font-size: 0.8rem; font-weight: 300;
+      color: var(--stone); line-height: 1.5;
+    }
+    .inc-dot {
+      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+      margin-top: 0.4rem;
+    }
+    .inc-dot.yes { background: var(--amber); }
+    .inc-dot.no  { background: var(--mist); }
+
+    /* ── Gallery strip ── */
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .gal-img {
+      overflow: hidden; background: var(--cream);
+    }
+    .gal-img:first-child { grid-row: span 2; aspect-ratio: 3/4; }
+    .gal-img:not(:first-child) { aspect-ratio: 4/3; }
+    .gal-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 1.5s var(--ease-out); display: block;
+      filter: brightness(0.9) saturate(1.05);
+    }
+    .gal-img:hover img { transform: scale(1.06); }
+
+    /* ── Map placeholder ── */
+    .map-placeholder {
+      background: var(--cream); border: 1px solid rgba(14,12,10,0.08);
+      aspect-ratio: 16/7; display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.75rem;
+    }
+    .map-placeholder svg { color: var(--mist); }
+    .map-placeholder p { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); }
+
+    /* ══ STICKY SIDEBAR ══ */
+    .detail-sidebar {
+      position: sticky; top: 80px;
+    }
+    .sidebar-card {
+      border: 1px solid rgba(14,12,10,0.09);
+      background: var(--warm-white);
+      overflow: hidden;
+    }
+    .sidebar-card-header {
+      background: var(--ink); padding: 1.5rem 1.625rem;
+    }
+    .sidebar-price-label {
+      font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.375rem;
+    }
+    .sidebar-price {
+      font-family: var(--serif); font-size: 2.2rem; font-weight: 400;
+      color: var(--amber-pale); line-height: 1; letter-spacing: -0.02em;
+    }
+    .sidebar-price sub {
+      font-family: var(--sans); font-size: 0.75rem; font-weight: 300;
+      color: rgba(255,255,255,0.35); vertical-align: baseline; margin-left: 0.25rem;
+    }
+    .sidebar-body { padding: 1.5rem 1.625rem; }
+
+    .sidebar-specs { margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .sidebar-spec-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 0.75rem; border-bottom: 1px solid rgba(14,12,10,0.06);
+    }
+    .sidebar-spec-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .ss-key {
+      font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--mist);
+    }
+    .ss-val {
+      font-family: var(--sans); font-size: 0.82rem; font-weight: 500; color: var(--ink);
+      text-align: right;
+    }
+    .ss-val.amber { color: var(--amber); }
+
+    .sidebar-cta { display: flex; flex-direction: column; gap: 0.75rem; }
+    .sidebar-cta .btn { width: 100%; justify-content: center; }
+    .sidebar-contact {
+      text-align: center; font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.1em; color: var(--mist); margin-top: 0.5rem;
+    }
+    .sidebar-contact a { color: var(--amber); transition: color 0.3s; }
+    .sidebar-contact a:hover { color: var(--amber-glow); }
+
+    .sidebar-trust {
+      margin-top: 1.25rem; padding-top: 1.25rem;
+      border-top: 1px solid rgba(14,12,10,0.07);
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 0.625rem;
+      font-family: var(--sans); font-size: 0.75rem; font-weight: 300; color: var(--stone);
+    }
+    .trust-item svg { color: var(--amber); flex-shrink: 0; }
+
+    /* ── Related treks ── */
+    .related-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1rem, 2vw, 1.5rem);
+    }
+    .related-card {
+      display: flex; flex-direction: column;
+      border: 1px solid rgba(14,12,10,0.08);
+      overflow: hidden; text-decoration: none; color: inherit;
+      transition: transform 0.4s var(--ease-out), box-shadow 0.4s;
+    }
+    .related-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .related-card-img { aspect-ratio: 3/2; overflow: hidden; }
+    .related-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease-out); filter: brightness(0.88); }
+    .related-card:hover .related-card-img img { transform: scale(1.06); }
+    .related-card-body { padding: 1.125rem; flex: 1; background: var(--warm-white); }
+    .related-card-tag { font-family: var(--mono); font-size: 0.44rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.35rem; }
+    .related-card-name { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: var(--ink); margin-bottom: 0.35rem; }
+    .related-card-meta { font-family: var(--mono); font-size: 0.48rem; color: var(--mist); letter-spacing: 0.08em; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 1024px) {
+      .detail-layout { grid-template-columns: 1fr; }
+      .detail-sidebar { position: static; }
+      .sidebar-card { max-width: 480px; }
+    }
+    @media (max-width: 768px) {
+      .quick-stats { grid-template-columns: repeat(2, 1fr); }
+      .qs-cell:nth-child(2) { border-right: none; }
+      .qs-cell { border-bottom: 1px solid rgba(14,12,10,0.08); }
+      .qs-cell:nth-child(3), .qs-cell:nth-child(4) { border-bottom: none; }
+      .inc-grid { grid-template-columns: 1fr; }
+      .gallery-strip { grid-template-columns: 1fr 1fr; }
+      .gallery-strip .gal-img:first-child { grid-row: span 1; grid-column: span 2; aspect-ratio: 16/9; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .quick-stats { grid-template-columns: repeat(2, 1fr); }
+      .detail-hero h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main>
+
+    <!-- ══ HERO ══ -->
+    <div class="detail-hero">
+      <img class="detail-hero-img"
+           src="/assets/images/everest-base-camp-5364m-photo.jpg"
+           alt="Everest Base Camp Trek — Khumbu Glacier, Nepal"
+           loading="eager">
+      <div class="detail-hero-overlay"></div>
+      <div class="detail-hero-content">
+        <div class="container">
+          <div class="detail-breadcrumb">
+            <a href="/">Home</a>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <a href="/trekking.html">Trekking</a>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <span>Everest Base Camp</span>
+          </div>
+          <div class="detail-hero-tag">Khumbu Region · Nepal</div>
+          <h1>Everest <em>Base Camp</em></h1>
+          <div class="detail-hero-pills">
+            <span class="detail-pill amber">Most Popular Trek</span>
+            <span class="detail-pill">14 Days</span>
+            <span class="detail-pill">5,364 m Max Alt.</span>
+            <span class="detail-pill">Moderate</span>
+            <span class="detail-pill">Spring & Autumn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CONTENT + SIDEBAR ══ -->
+    <div class="container">
+      <div class="detail-layout">
+
+        <!-- ── MAIN COLUMN ── -->
+        <div class="detail-main">
+
+          <!-- Quick Stats -->
+          <div class="quick-stats reveal">
+            <div class="qs-cell">
+              <div class="qs-val">14</div>
+              <div class="qs-key">Days</div>
+            </div>
+            <div class="qs-cell">
+              <div class="qs-val">5,364 m</div>
+              <div class="qs-key">Max Altitude</div>
+            </div>
+            <div class="qs-cell">
+              <div class="qs-val">130 km</div>
+              <div class="qs-key">Total Distance</div>
+            </div>
+            <div class="qs-cell">
+              <div class="qs-val">Max 8</div>
+              <div class="qs-key">Group Size</div>
+            </div>
+          </div>
+
+          <!-- Overview -->
+          <div class="detail-section reveal">
+            <div class="detail-section-label">Overview</div>
+            <h2>The World's Most Iconic <em>Trek</em></h2>
+            <div class="detail-prose">
+              <p>The Everest Base Camp trek is Nepal's most celebrated trail — a 14-day journey that begins with a flight into Lukla airport (2,860m) and climbs steadily through one of the most dramatic landscapes on earth. You'll pass through ancient Sherpa villages, prayer-flag-draped ridges, and high alpine terrain that few humans ever witness.</p>
+              <p>Standing at 5,364 metres, surrounded by Everest, Lhotse, Nuptse and the vast white expanse of the Khumbu Glacier, is an experience that simply cannot be replicated anywhere else on earth. Our 14-day itinerary builds in proper acclimatisation days at Namche Bazaar and Dingboche, giving your body the time it needs to adapt — safely.</p>
+              <p>Every trek is led by a licensed, certified Sherpa guide whose family has lived in the Khumbu for generations. You won't just walk to Everest — you'll be introduced to it.</p>
+            </div>
+          </div>
+
+          <!-- Gallery -->
+          <div class="detail-section reveal">
+            <div class="detail-section-label">Photography</div>
+            <div class="gallery-strip">
+              <div class="gal-img">
+                <img src="/assets/images/everest-base-camp-5364m-photo.jpg" alt="Khumbu glacier at Everest Base Camp" loading="lazy">
+              </div>
+              <div class="gal-img">
+                <img src="/assets/images/annapurna-circuit-mountain-range.jpg" alt="Himalayan peaks from the trail" loading="lazy">
+              </div>
+              <div class="gal-img">
+                <img src="/assets/images/ama-dablam-nepal-mountain.png" alt="Ama Dablam from Namche Bazaar" loading="lazy">
+              </div>
+              <div class="gal-img">
+                <img src="/assets/images/manaslu-mountain-himalaya-nepal.jpg" alt="Sunrise over the Khumbu range" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Itinerary -->
+          <div class="detail-section reveal">
+            <div class="detail-section-label">Day by Day</div>
+            <h2>Full <em>Itinerary</em></h2>
+            <div class="itinerary" id="itinerary">
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D1</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Arrive Kathmandu — Briefing &amp; Gear Check</div>
+                    <div class="itin-day-alt">1,400 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>Welcome to Kathmandu! Your Beyond Summit guide will meet you at the airport. The afternoon is free to explore Thamel. Evening team briefing with your lead Sherpa — we review the route, check your gear, and share weather forecasts.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">Hotel</span>
+                      <span class="itin-chip">Kathmandu</span>
+                      <span class="itin-chip">Meals: D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D2</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Fly Kathmandu → Lukla — Trek to Phakding</div>
+                    <div class="itin-day-alt">2,610 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>A thrilling 35-minute mountain flight into Lukla's Tenzing-Hillary Airport (2,860m) — one of the world's most dramatic runways. Trek through Cheplung and Nurning villages, descending to the Dudh Kosi river, reaching Phakding by afternoon.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">Flight + Walk ~3–4 hrs</span>
+                      <span class="itin-chip">Teahouse</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D3</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Phakding → Namche Bazaar</div>
+                    <div class="itin-day-alt">3,440 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>The most dramatic day of approach. Cross suspension bridges over the roaring Dudh Kosi, pass through Monjo (the gateway to Sagarmatha National Park), then climb steeply to the Sherpa capital of Namche Bazaar — a horseshoe-shaped town with bakeries, gear shops, and the first views of Everest.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">~5–6 hrs</span>
+                      <span class="itin-chip">Gain: 830 m</span>
+                      <span class="itin-chip">Teahouse</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D4</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Namche Bazaar Acclimatisation Day</div>
+                    <div class="itin-day-alt">3,440 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>Rest and acclimatise. Morning hike up to Syangboche (3,800m) for panoramic Everest, Lhotse, and Ama Dablam views. Afternoon at leisure — visit the Sherpa Museum, explore the Saturday market (if timing permits), or simply rest. Pulse-ox checks with our guide each evening.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">Acclimatisation</span>
+                      <span class="itin-chip">Optional hike 2–3 hrs</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D5–6</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Namche → Tengboche → Dingboche</div>
+                    <div class="itin-day-alt">4,410 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>Two days of progressively rewarding terrain. Day 5: Climb to Tengboche Monastery (3,867m) — the spiritual heart of the Khumbu, with Ama Dablam and Everest framed perfectly above the prayer halls. Day 6: Descend to the Imja Khola valley and climb to Dingboche in the wide upper valley.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">2 Days</span>
+                      <span class="itin-chip">~5–6 hrs each</span>
+                      <span class="itin-chip">Teahouses</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D7</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Dingboche Acclimatisation — Nagarjun Hill</div>
+                    <div class="itin-day-alt">4,410 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>Second acclimatisation day. Morning hike to Nagarjun Hill (5,100m) for stunning views of Makalu, Lhotse, Island Peak and Ama Dablam. The extra altitude exposure prepares your body for Base Camp without sleeping high — a critical part of our safety protocol.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">Acclimatisation</span>
+                      <span class="itin-chip">Hike to 5,100 m</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D8–9</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Dingboche → Lobuche → Gorak Shep → EBC</div>
+                    <div class="itin-day-alt">5,364 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>The culminating two days. Day 8: Trek to Lobuche (4,940m) along the lateral moraine of the Khumbu Glacier. Day 9: The big one — push to Gorak Shep (5,140m) and then walk the final 3.5km across glacial rubble to Everest Base Camp (5,364m). Stand where the greatest mountaineers in history began their summit pushes. Return to Gorak Shep for the night.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">2 Days</span>
+                      <span class="itin-chip">Summit: 5,364 m</span>
+                      <span class="itin-chip">Most Memorable Day</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D10</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Kala Patthar Sunrise — Descent to Pheriche</div>
+                    <div class="itin-day-alt">5,545 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>Pre-dawn start for Kala Patthar (5,545m) — the classic Everest photography viewpoint. Watch the summit catch first light as the sun rises over Tibet. A truly unforgettable moment. Descend rapidly to Pheriche (4,288m) as your body celebrates the lower altitude.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">Summit: 5,545 m</span>
+                      <span class="itin-chip">Early start 4am</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D11–13</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Descend Pheriche → Namche → Lukla</div>
+                    <div class="itin-day-alt">2,860 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>The return is always faster — and your legs are strong. Three days descending past familiar landscapes that look completely different on the way down. Overnight in Namche (a chance to spend your remaining rupees on souvenirs) before the final push to Lukla. Celebration dinner with your Sherpa team.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">3 Days</span>
+                      <span class="itin-chip">~6–7 hrs/day</span>
+                      <span class="itin-chip">Meals: B, L, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itin-day" onclick="toggleDay(this)">
+                <div class="itin-day-num-col">
+                  <div class="itin-day-num">D14</div>
+                  <div class="itin-connector"></div>
+                </div>
+                <div class="itin-day-body">
+                  <div class="itin-day-header">
+                    <div class="itin-day-title">Fly Lukla → Kathmandu — Farewell Dinner</div>
+                    <div class="itin-day-alt">1,400 m</div>
+                    <svg class="itin-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                  </div>
+                  <div class="itin-day-detail">
+                    <p>Morning flight back to Kathmandu. Afternoon free — we recommend a massage, hot shower, and a good meal. Evening farewell dinner with your guide team. You are officially an EBC trekker — one of fewer than 40,000 who make it each year.</p>
+                    <div class="itin-meta-chips">
+                      <span class="itin-chip">Flight</span>
+                      <span class="itin-chip">Hotel</span>
+                      <span class="itin-chip">Meals: B, D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /itinerary -->
+          </div>
+
+          <!-- Includes / Excludes -->
+          <div class="detail-section reveal">
+            <div class="detail-section-label">Package Details</div>
+            <h2>What's <em>Included</em></h2>
+            <div class="inc-grid">
+              <div class="inc-col">
+                <h4>Included</h4>
+                <div class="inc-list">
+                  <div class="inc-item"><div class="inc-dot yes"></div>All domestic flights (KTM–Lukla–KTM)</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>Licensed, certified Sherpa guide</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>Porters (1 porter per 2 clients)</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>All teahouse accommodation on trek</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>3 meals per day on trek</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>Sagarmatha National Park permits</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>Khumbu Pasang Lhamu Rural Municipality fee</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>TIMS card (Tourism Information Management)</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>Daily oxygen saturation checks</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>Emergency communication device</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>First aid kit &amp; Gamow bag</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>1 night hotel in Kathmandu (D&amp;B)</div>
+                  <div class="inc-item"><div class="inc-dot yes"></div>Airport transfers &amp; farewell dinner</div>
+                </div>
+              </div>
+              <div class="inc-col">
+                <h4>Not Included</h4>
+                <div class="inc-list">
+                  <div class="inc-item"><div class="inc-dot no"></div>International flights to/from Kathmandu</div>
+                  <div class="inc-item"><div class="inc-dot no"></div>Nepal visa fees (~$30–50 USD)</div>
+                  <div class="inc-item"><div class="inc-dot no"></div>Travel insurance (mandatory — must include heli-evac)</div>
+                  <div class="inc-item"><div class="inc-dot no"></div>Hot showers &amp; battery charging on trek (small fees)</div>
+                  <div class="inc-item"><div class="inc-dot no"></div>Personal equipment &amp; clothing</div>
+                  <div class="inc-item"><div class="inc-dot no"></div>Tips for guides &amp; porters (customary)</div>
+                  <div class="inc-item"><div class="inc-dot no"></div>Personal snacks, beverages, wifi</div>
+                  <div class="inc-item"><div class="inc-dot no"></div>Extra nights due to weather delays</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Route Map -->
+          <div class="detail-section reveal">
+            <div class="detail-section-label">Route</div>
+            <h2>Trek <em>Map</em></h2>
+            <div class="map-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p>Kathmandu → Lukla → Phakding → Namche → Tengboche → Dingboche → Lobuche → EBC → Kala Patthar → Lukla → Kathmandu</p>
+            </div>
+          </div>
+
+        </div><!-- /detail-main -->
+
+        <!-- ── SIDEBAR ── -->
+        <div class="detail-sidebar">
+          <div class="sidebar-card reveal">
+            <div class="sidebar-card-header">
+              <div class="sidebar-price-label">Price per person</div>
+              <div class="sidebar-price">$1,650 <sub>/ person</sub></div>
+            </div>
+            <div class="sidebar-body">
+              <div class="sidebar-specs">
+                <div class="sidebar-spec-row">
+                  <div class="ss-key">Duration</div>
+                  <div class="ss-val">14 Days</div>
+                </div>
+                <div class="sidebar-spec-row">
+                  <div class="ss-key">Max Altitude</div>
+                  <div class="ss-val amber">5,364 m (17,598 ft)</div>
+                </div>
+                <div class="sidebar-spec-row">
+                  <div class="ss-key">Difficulty</div>
+                  <div class="ss-val">Moderate</div>
+                </div>
+                <div class="sidebar-spec-row">
+                  <div class="ss-key">Group Size</div>
+                  <div class="ss-val">Max 8 people</div>
+                </div>
+                <div class="sidebar-spec-row">
+                  <div class="ss-key">Best Season</div>
+                  <div class="ss-val">Mar–May, Oct–Nov</div>
+                </div>
+                <div class="sidebar-spec-row">
+                  <div class="ss-key">Start / End</div>
+                  <div class="ss-val">Kathmandu, Nepal</div>
+                </div>
+                <div class="sidebar-spec-row">
+                  <div class="ss-key">Availability</div>
+                  <div class="ss-val amber">Spring 2026 Open</div>
+                </div>
+              </div>
+              <div class="sidebar-cta">
+                <a href="/pages/contact.html?trek=ebc" class="btn btn-amber">
+                  Book This Trek
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="/pages/contact.html?trek=ebc&type=enquiry" class="btn btn-outline">
+                  Send an Enquiry
+                </a>
+              </div>
+              <div class="sidebar-contact">
+                Or call us anytime at <a href="tel:+9779811157421">+977 9811 157 421</a>
+              </div>
+              <div class="sidebar-trust">
+                <div class="trust-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  100% safety record since 2015
+                </div>
+                <div class="trust-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  Max 8 per group, 1:1 on summit
+                </div>
+                <div class="trust-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Free date changes up to 30 days
+                </div>
+                <div class="trust-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Licensed by Nepal Tourism Board
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /detail-layout -->
+    </div>
+
+    <!-- ══ RELATED TREKS ══ -->
+    <section class="section alt-bg" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="eyebrow">Everest Region</span>
+            <h2 class="section-title" id="related-heading">You Might Also <em>Like</em></h2>
+          </div>
+          <a href="/trekking.html" class="view-all-link">
+            All Treks
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="related-grid">
+          <a href="/treks/gokyo-lakes-trek.html" class="related-card reveal">
+            <div class="related-card-img">
+              <img src="/assets/images/everest-base-camp-5364m-photo.jpg" alt="Gokyo Lakes Trek" loading="lazy">
+            </div>
+            <div class="related-card-body">
+              <div class="related-card-tag">Khumbu · Gokyo Valley</div>
+              <div class="related-card-name">Gokyo Lakes &amp; Ri</div>
+              <div class="related-card-meta">14 Days · 5,357 m · From $1,480</div>
+            </div>
+          </a>
+          <a href="/treks/island-peak-climbing.html" class="related-card reveal reveal-delay-1">
+            <div class="related-card-img">
+              <img src="/assets/images/mera-peak-mountain-climb.jpg" alt="Island Peak Climbing" loading="lazy">
+            </div>
+            <div class="related-card-body">
+              <div class="related-card-tag">Everest Region · Peak</div>
+              <div class="related-card-name">Island Peak Climb</div>
+              <div class="related-card-meta">20 Days · 6,189 m · From $2,200</div>
+            </div>
+          </a>
+          <a href="/peaks/mera-peak-climb.html" class="related-card reveal reveal-delay-2">
+            <div class="related-card-img">
+              <img src="/assets/images/mera-peak-mountain-climb.jpg" alt="Mera Peak Climb" loading="lazy">
+            </div>
+            <div class="related-card-body">
+              <div class="related-card-tag">Hinku Valley · Peak</div>
+              <div class="related-card-name">Mera Peak</div>
+              <div class="related-card-meta">18 Days · 6,476 m · From $1,950</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="contact-strip-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+  <script src="/js/main.js"></script>
+  <script>
+    BSE.loadAll([
+      { selector: '#nav-placeholder',           url: '/components/nav.html' },
+      { selector: '#contact-strip-placeholder', url: '/components/contact-strip.html' },
+      { selector: '#footer-placeholder',        url: '/components/footer.html' },
+    ]);
+
+    /* Itinerary accordion */
+    function toggleDay(day) {
+      const isOpen = day.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.itin-day.open').forEach(d => d.classList.remove('open'));
+      // Open clicked (unless it was already open)
+      if (!isOpen) day.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>

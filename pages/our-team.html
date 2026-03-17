@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Sherpa Team | Beyond Summit Expeditions · Nepal Mountain Guides</title>
+  <meta name="description" content="Meet our IFMGA-certified Sherpa guides — Everest summiteers, high-altitude medics, and the most experienced mountain team in Nepal. 18 certified guides. 400+ combined seasons above 5,000m.">
+  <meta name="keywords" content="Sherpa guides Nepal, IFMGA certified mountain guides, Everest guides Nepal, Nepal expedition team, professional mountain guides Kathmandu">
+  <link rel="canonical" href="https://beyondexped.vercel.app/guides.html">
+  <meta property="og:title" content="Our Sherpa Team · Beyond Summit Expeditions">
+  <meta property="og:description" content="18 IFMGA-certified Sherpa guides. 400+ combined seasons above 5,000m. Meet Nepal's finest expedition team.">
+  <meta property="og:url" content="https://beyondexped.vercel.app/guides.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf7f2; --cream-dark: #f2ede4;
+      --amber: #b8651a; --amber-light: #d4812a; --amber-pale: #f0c080;
+      --charcoal: #1c1814; --stone: #3d3530; --muted: #7a6e65;
+      --border: rgba(60,45,30,0.1);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --mono: 'DM Mono', monospace;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --shadow-sm: 0 2px 12px rgba(60,40,20,0.08);
+      --shadow-md: 0 8px 32px rgba(60,40,20,0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--charcoal); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* NAV (same as about.html) */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 800; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 4rem; transition: all 0.5s var(--ease); }
+    nav.scrolled { background: rgba(250,247,242,0.96); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1rem 4rem; box-shadow: var(--shadow-sm); }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo-text { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: white; transition: color 0.4s; }
+    nav.scrolled .nav-logo-text { color: var(--charcoal); }
+    .nav-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(250,247,242,0.7); margin-top: 2px; transition: color 0.4s; }
+    nav.scrolled .nav-logo-text em { color: var(--amber); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: rgba(250,247,242,0.85); transition: color 0.3s; }
+    nav.scrolled .nav-links a { color: var(--stone); }
+    .nav-links a:hover { color: var(--amber-light) !important; }
+    .nav-links a.active { color: var(--amber) !important; }
+    .nav-cta { background: var(--amber); color: white !important; padding: 0.6rem 1.5rem; font-size: 0.82rem !important; font-weight: 500 !important; letter-spacing: 0.04em !important; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--amber-light) !important; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; width: 44px; height: 44px; gap: 5px; cursor: pointer; background: rgba(250,247,242,0.12); border: 1px solid rgba(250,247,242,0.25); border-radius: 6px; padding: 0 12px; }
+    nav.scrolled .nav-hamburger { background: rgba(60,40,20,0.06); border-color: var(--border); }
+    .nav-hamburger span { display: block; width: 100%; height: 1.5px; background: white; transition: all 0.4s var(--ease); }
+    nav.scrolled .nav-hamburger span { background: var(--charcoal); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-drawer { position: fixed; inset: 0; z-index: 700; background: var(--cream); display: flex; flex-direction: column; padding: 6rem 2rem 2rem; transform: translateX(100%); transition: transform 0.5s var(--ease); }
+    .mobile-drawer.open { transform: none; }
+    .mobile-drawer-link { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; border-bottom: 1px solid var(--border); font-family: var(--serif); font-size: 1.8rem; color: var(--charcoal); opacity: 0; transform: translateX(20px); transition: opacity 0.4s, transform 0.4s, color 0.3s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(1){opacity:1;transform:none;transition-delay:.06s;}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(2){opacity:1;transform:none;transition-delay:.10s;}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(3){opacity:1;transform:none;transition-delay:.14s;}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(4){opacity:1;transform:none;transition-delay:.18s;}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(5){opacity:1;transform:none;transition-delay:.22s;}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(6){opacity:1;transform:none;transition-delay:.26s;}
+    .mobile-drawer-link:hover{color:var(--amber);} .mobile-drawer-link.active-link{color:var(--amber);} .mobile-drawer-link.highlight{color:var(--amber);}
+    .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 20px rgba(37,211,102,0.4);transition:transform 0.4s var(--ease);}
+    .wa-float:hover{transform:scale(1.1);}
+
+    /* COMMONS */
+    .eyebrow { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 0.75rem; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1{transition-delay:.1s;} .reveal.d2{transition-delay:.2s;} .reveal.d3{transition-delay:.3s;}
+
+    /* HERO */
+    .hero { position: relative; height: 55vh; min-height: 420px; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,6,2,0.92) 0%, rgba(10,6,2,0.2) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 0 5rem 4rem; max-width: 1300px; margin: 0 auto; width: 100%; }
+    .hero-label { display: inline-flex; align-items: center; gap: 0.6rem; margin-bottom: 0.875rem; opacity: 0; animation: rise 0.8s 0.2s var(--ease) forwards; }
+    .hero-label span { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber-pale); }
+    .hero-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--amber-pale); }
+    .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 400; color: white; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1rem; opacity: 0; animation: rise 1s 0.3s var(--ease) forwards; }
+    .hero h1 em { font-style: italic; color: var(--amber-pale); }
+    .hero p { font-size: 0.88rem; color: rgba(255,255,255,0.5); max-width: 420px; line-height: 1.7; opacity: 0; animation: rise 0.8s 0.45s var(--ease) forwards; }
+    @keyframes rise { from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;} }
+
+    /* TEAM STATS */
+    .team-stats { background: var(--charcoal); }
+    .ts-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); }
+    .ts-item { text-align: center; padding: 2rem 1rem; border-right: 1px solid rgba(255,255,255,0.06); }
+    .ts-item:last-child { border-right: none; }
+    .ts-n { font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 500; color: var(--amber-pale); line-height: 1; }
+    .ts-l { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 0.3rem; }
+
+    /* FOUNDERS */
+    .founders { padding: 6rem 4rem; max-width: 1300px; margin: 0 auto; }
+    .founders-header { margin-bottom: 3.5rem; }
+    .founders-header h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--charcoal); line-height: 1.1; }
+    .founders-header h2 em { font-style: italic; color: var(--amber); }
+    .founders-header p { font-size: 0.85rem; color: var(--muted); max-width: 520px; line-height: 1.75; margin-top: 0.75rem; }
+    .founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .founder-card { background: white; border: 1px solid var(--border); overflow: hidden; transition: box-shadow 0.3s; }
+    .founder-card:hover { box-shadow: var(--shadow-md); }
+    .founder-img { position: relative; overflow: hidden; aspect-ratio: 4/3; }
+    .founder-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85) saturate(1.05); transition: transform 1.5s var(--ease); }
+    .founder-card:hover .founder-img img { transform: scale(1.04); }
+    .founder-img-tag { position: absolute; bottom: 1rem; left: 1rem; background: var(--amber); color: white; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.35rem 0.75rem; }
+    .founder-body { padding: 1.75rem; }
+    .founder-name { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.25rem; }
+    .founder-role { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; }
+    .founder-bio { font-size: 0.82rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.25rem; }
+    .founder-peaks { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .peak-tag { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); background: var(--cream-dark); border: 1px solid var(--border); padding: 0.3rem 0.6rem; }
+
+    /* GUIDE TEAM GRID */
+    .guides { background: var(--cream-dark); border-top: 1px solid var(--border); padding: 6rem 4rem; }
+    .guides-inner { max-width: 1300px; margin: 0 auto; }
+    .guides-header { margin-bottom: 3rem; }
+    .guides-header h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--charcoal); line-height: 1.1; }
+    .guides-header h2 em { font-style: italic; color: var(--amber); }
+    .guides-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .guide-card { background: white; border: 1px solid var(--border); padding: 1.75rem 1.5rem; transition: box-shadow 0.3s, transform 0.3s; }
+    .guide-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .guide-avatar { width: 48px; height: 48px; border-radius: 50%; background: rgba(184,101,26,0.08); border: 2px solid rgba(184,101,26,0.2); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.2rem; color: var(--amber); margin-bottom: 1rem; }
+    .guide-name { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.2rem; }
+    .guide-role { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem; }
+    .guide-spec { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .guide-summits { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); }
+    .guide-summits svg { color: var(--amber); }
+
+    /* CERTIFICATIONS STRIP */
+    .cert-strip { background: white; border-top: 1px solid var(--border); padding: 4rem; }
+    .cert-strip-inner { max-width: 1300px; margin: 0 auto; }
+    .cert-strip h2 { font-family: var(--serif); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; color: var(--charcoal); margin-bottom: 2rem; }
+    .cert-strip h2 em { font-style: italic; color: var(--amber); }
+    .cert-badges { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .cert-badge-item { display: flex; align-items: center; gap: 0.75rem; background: var(--cream-dark); border: 1px solid var(--border); padding: 0.875rem 1.25rem; transition: border-color 0.3s; }
+    .cert-badge-item:hover { border-color: var(--amber); }
+    .cert-badge-ico { color: var(--amber); flex-shrink: 0; }
+    .cert-badge-text { font-size: 0.78rem; color: var(--stone); font-weight: 500; }
+
+    /* CTA */
+    .cta-strip { background: var(--amber); padding: 4rem; text-align: center; }
+    .cta-strip h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; color: white; margin-bottom: 0.75rem; }
+    .cta-strip p { font-size: 0.875rem; color: rgba(255,255,255,0.75); margin-bottom: 1.75rem; }
+    .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: var(--amber); padding: 0.9rem 2.25rem; font-size: 0.85rem; font-weight: 600; transition: transform 0.3s, gap 0.3s; }
+    .btn-white:hover { transform: translateY(-2px); gap: 0.8rem; }
+
+    /* FOOTER (shared) */
+    footer { background: var(--charcoal); padding: 4rem 4rem 2rem; }
+    .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 2rem; }
+    .footer-logo-text { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: white; }
+    .footer-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
+    .footer-desc { font-size: 0.78rem; color: rgba(255,255,255,0.35); line-height: 1.75; margin-top: 0.75rem; }
+    .footer-contact { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .footer-contact a { font-family: var(--mono); font-size: 0.6rem; color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+    .footer-contact a:hover { color: var(--amber-pale); }
+    .footer-col h4 { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col a { font-size: 0.78rem; color: rgba(255,255,255,0.35); transition: color 0.3s, padding-left 0.3s; }
+    .footer-col a:hover { color: rgba(255,255,255,0.7); padding-left: 4px; }
+    .footer-bottom { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom p { font-family: var(--mono); font-size: 0.52rem; color: rgba(255,255,255,0.16); }
+    .footer-socials { display: flex; gap: 0.6rem; }
+    .social-ico { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.28); transition: all 0.3s; }
+    .social-ico:hover { border-color: var(--amber); color: var(--amber); }
+
+    @media (max-width: 1024px) {
+      nav { padding: 1.25rem 2rem; } nav.scrolled { padding: 0.875rem 2rem; }
+      .nav-links { display: none; } .nav-hamburger { display: flex; }
+      .hero-content { padding: 0 2rem 3.5rem; }
+      .ts-inner { grid-template-columns: repeat(2,1fr); }
+      .ts-item:nth-child(2) { border-right: none; }
+      .founders { padding: 4rem 2rem; }
+      .founders-grid { grid-template-columns: 1fr; }
+      .guides { padding: 4rem 2rem; }
+      .guides-grid { grid-template-columns: repeat(2,1fr); }
+      .cert-strip { padding: 3rem 2rem; }
+      .cta-strip { padding: 3rem 2rem; }
+      footer { padding: 3rem 2rem 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 640px) {
+      .guides-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="mobile-drawer-link" onclick="closeDrawer()">Home <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="about.html" class="mobile-drawer-link" onclick="closeDrawer()">About <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="guides.html" class="mobile-drawer-link active-link" onclick="closeDrawer()">Our Guides <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="index.html#expeditions" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="index.html#trekking" class="mobile-drawer-link" onclick="closeDrawer()">Trekking <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Contact Us →</a>
+  </div>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/><path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/><circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/></svg>
+      <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions · Nepal</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="guides.html" class="active">Our Team</a>
+      <a href="index.html#expeditions">Expeditions</a>
+      <a href="index.html#trekking">Trekking</a>
+      <a href="contact.html" class="nav-cta">Book Now →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=85&w=1800&auto=format&fit=crop" alt="Sherpa guides Nepal mountains" loading="eager">
+    </div>
+    <div class="hero-content">
+      <div class="hero-label"><span class="hero-dot"></span><span>Our Sherpa Team</span></div>
+      <h1>Nepal's Finest<br><em>Mountain Guides</em></h1>
+      <p>18 IFMGA-certified Sherpa guides. 400+ combined seasons above 5,000 metres. These are the people who will take you to your summit.</p>
+    </div>
+  </section>
+
+  <!-- TEAM STATS -->
+  <div class="team-stats">
+    <div class="ts-inner">
+      <div class="ts-item reveal"><div class="ts-n">18</div><div class="ts-l">Certified Guides</div></div>
+      <div class="ts-item reveal d1"><div class="ts-n">400+</div><div class="ts-l">Seasons Above 5,000m</div></div>
+      <div class="ts-item reveal d2"><div class="ts-n">6</div><div class="ts-l">High-Altitude Medics</div></div>
+      <div class="ts-item reveal d3"><div class="ts-n">1:1</div><div class="ts-l">Sherpa Ratio Summit Day</div></div>
+    </div>
+  </div>
+
+  <!-- FOUNDERS -->
+  <section class="founders">
+    <div class="founders-header reveal">
+      <span class="eyebrow">The Founders</span>
+      <h2>Built by <em>Summiteers</em></h2>
+      <p>Beyond Summit was created by two Sherpa climbers who believed the best guides in the world deserved to run the best company in the world.</p>
+    </div>
+    <div class="founders-grid">
+      <div class="founder-card reveal">
+        <div class="founder-img">
+          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=800&auto=format&fit=crop" alt="Dawa Sherpa - Co-Founder Beyond Summit Expeditions">
+          <div class="founder-img-tag">Co-Founder</div>
+        </div>
+        <div class="founder-body">
+          <div class="founder-name">Dawa Sherpa</div>
+          <div class="founder-role">Co-Founder · Lead Expedition Director</div>
+          <p class="founder-bio">Made his first Everest summit at 26. Has guided over 80 clients to the top of the world. Dawa built Beyond Summit's safety protocols — now considered industry-standard across Nepal.</p>
+          <div class="founder-peaks">
+            <span class="peak-tag">Everest ×12</span>
+            <span class="peak-tag">Lhotse ×4</span>
+            <span class="peak-tag">Manaslu ×6</span>
+            <span class="peak-tag">Ama Dablam ×9</span>
+          </div>
+        </div>
+      </div>
+      <div class="founder-card reveal d1">
+        <div class="founder-img">
+          <img src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=800&auto=format&fit=crop" alt="Pemba Norbu - Co-Founder Beyond Summit Expeditions">
+          <div class="founder-img-tag">Co-Founder</div>
+        </div>
+        <div class="founder-body">
+          <div class="founder-name">Pemba Norbu</div>
+          <div class="founder-role">Co-Founder · Head of Logistics &amp; Training</div>
+          <p class="founder-bio">Has stood on eleven of the fourteen 8,000m peaks. Pemba oversees guide training, client acclimatisation programmes, and leads our annual Everest clean-up expeditions.</p>
+          <div class="founder-peaks">
+            <span class="peak-tag">11 × 8,000ers</span>
+            <span class="peak-tag">Cho Oyu ×5</span>
+            <span class="peak-tag">Dhaulagiri ×3</span>
+            <span class="peak-tag">K2 ×1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE TEAM -->
+  <section class="guides">
+    <div class="guides-inner">
+      <div class="guides-header reveal">
+        <span class="eyebrow">The Full Team</span>
+        <h2>Our <em>Certified Guides</em></h2>
+      </div>
+      <div class="guides-grid">
+        <div class="guide-card reveal">
+          <div class="guide-avatar">N</div>
+          <div class="guide-name">Nima Dorje Sherpa</div>
+          <div class="guide-role">Senior Everest Guide</div>
+          <div class="guide-spec">9 Everest summits. WMS wilderness medic. Specialises in high-altitude acclimatisation coaching.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>9 Everest Summits</div>
+        </div>
+        <div class="guide-card reveal d1">
+          <div class="guide-avatar">P</div>
+          <div class="guide-name">Pasang Lhamu Sherpa</div>
+          <div class="guide-role">Technical Climbing Lead</div>
+          <div class="guide-spec">Specialist on Ama Dablam and Island Peak. IFMGA certified. 14 seasons on technical ridges.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>Ama Dablam Specialist</div>
+        </div>
+        <div class="guide-card reveal d2">
+          <div class="guide-avatar">T</div>
+          <div class="guide-name">Tshering Wangchuk</div>
+          <div class="guide-role">8,000m Expedition Guide</div>
+          <div class="guide-spec">Manaslu and Cho Oyu expert. High-altitude cook trained. Known for exceptional client communication.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>Manaslu × 7</div>
+        </div>
+        <div class="guide-card reveal d3">
+          <div class="guide-avatar">A</div>
+          <div class="guide-name">Anu Sherpa</div>
+          <div class="guide-role">Trek Leader · EBC Specialist</div>
+          <div class="guide-spec">Led over 200 Everest Base Camp treks. Speaks English, French, and Japanese. First aid trained.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>200+ EBC Treks</div>
+        </div>
+        <div class="guide-card reveal">
+          <div class="guide-avatar">K</div>
+          <div class="guide-name">Khambi Sherpa</div>
+          <div class="guide-role">High-Altitude Medic</div>
+          <div class="guide-spec">WMS-certified medic with 10 seasons on Everest. Manages all expedition health monitoring and emergency protocols.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>WMS Certified Medic</div>
+        </div>
+        <div class="guide-card reveal d1">
+          <div class="guide-avatar">S</div>
+          <div class="guide-name">Sonam Gyalzen</div>
+          <div class="guide-role">Upper Mustang Specialist</div>
+          <div class="guide-spec">Speaks fluent Lo dialect. Deep knowledge of Mustang's cave monasteries and restricted permit routes.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>8+ Yrs Upper Mustang</div>
+        </div>
+        <div class="guide-card reveal d2">
+          <div class="guide-avatar">L</div>
+          <div class="guide-name">Lakpa Sherpa</div>
+          <div class="guide-role">Mera &amp; Island Peak Lead</div>
+          <div class="guide-spec">Nepal's top guide for first-time summit aspirants. Patient, encouraging, and known for high client success rates.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>Mera Peak × 40+</div>
+        </div>
+        <div class="guide-card reveal d3">
+          <div class="guide-avatar">R</div>
+          <div class="guide-name">Rinji Wangchuk</div>
+          <div class="guide-role">Annapurna Circuit Expert</div>
+          <div class="guide-spec">Led Annapurna Circuit and Manaslu circuit treks for 8 seasons. Expert in altitude sickness prevention.</div>
+          <div class="guide-summits"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4-2 4 2v6l-4 2-4-2z"/><path d="M4 14l4-2 4 2 4-2 4 2v5l-8 3-8-3z"/></svg>Thorong La × 80+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="cert-strip">
+    <div class="cert-strip-inner">
+      <span class="eyebrow reveal">Credentials</span>
+      <h2 class="reveal d1">Every Guide is <em>Certified</em></h2>
+      <div class="cert-badges reveal d2">
+        <div class="cert-badge-item">
+          <div class="cert-badge-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <span class="cert-badge-text">IFMGA / NMAS Certified</span>
+        </div>
+        <div class="cert-badge-item">
+          <div class="cert-badge-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <span class="cert-badge-text">Nepal Tourism Board Licensed</span>
+        </div>
+        <div class="cert-badge-item">
+          <div class="cert-badge-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <span class="cert-badge-text">WMS Wilderness Medics</span>
+        </div>
+        <div class="cert-badge-item">
+          <div class="cert-badge-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <span class="cert-badge-text">UIAA Safety Award</span>
+        </div>
+        <div class="cert-badge-item">
+          <div class="cert-badge-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <span class="cert-badge-text">ISO 21101 Certified</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h2>Meet Your Guide Before You Book</h2>
+    <p>We'll connect you with your personal Sherpa guide during your free consultation call.</p>
+    <a href="contact.html" class="btn-white">Book Free Consultation <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;align-items:center;gap:.75rem;margin-bottom:0.75rem">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/><path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/><circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/></svg>
+          <div class="footer-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
+        </a>
+        <p class="footer-desc">Nepal's trusted trekking and mountaineering company. Licensed by the Department of Tourism, Government of Nepal.</p>
+        <div class="footer-contact">
+          <a href="tel:+9779811157421"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+977-9811157421</a>
+          <a href="mailto:info@beyondsummitexped.com"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@beyondsummitexped.com</a>
+          <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Thamel, Kathmandu, Nepal</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Expeditions</h4><ul><li><a href="/articles/everest-blog-new.html">Mount Everest</a></li><li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li><li><a href="/articles/manaslu-blog.html">Manaslu</a></li><li><a href="/articles/merapeak.html">Mera Peak</a></li><li><a href="/expeditions.html">All Expeditions →</a></li></ul></div>
+      <div class="footer-col"><h4>Trekking</h4><ul><li><a href="/articles/everest-blog-new.html">Everest Base Camp</a></li><li><a href="/articles/annapurna-blog.html">Annapurna Circuit</a></li><li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li><li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li><li><a href="/articles/langtang-valley-blog.html">Langtang Valley</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">Why Choose Us</a></li><li><a href="guides.html">Our Sherpa Team</a></li><li><a href="who-we-are.html">Who We Are</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Government of Nepal</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" aria-label="Instagram" target="_blank"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://facebook.com/beyondsummitexped" class="social-ico" aria-label="Facebook" target="_blank"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobileDrawer');
+    let open = false;
+    function closeDrawer() { open=false; hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); drawer.classList.remove('open'); document.body.style.overflow=''; }
+    hamburger.addEventListener('click', () => { open=!open; hamburger.classList.toggle('open',open); hamburger.setAttribute('aria-expanded',String(open)); drawer.classList.toggle('open',open); document.body.style.overflow=open?'hidden':''; });
+    document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);} }); }, { rootMargin:'0px 0px -40px 0px', threshold:0.05 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
